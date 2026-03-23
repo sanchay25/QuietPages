@@ -116,3 +116,46 @@ function cursorAnimation() {
   });
 }
 cursorAnimation();
+
+function menuAnimation() {
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const items = document.querySelectorAll(".menu-item");
+
+  const tl = gsap.timeline({ paused: true, reversed: true });
+
+  tl.to(overlay, {
+    y: "0%",
+    duration: 0.6,
+    ease: "power3.inOut",
+  });
+
+  tl.to(
+    items,
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: {
+        each: 0.06,
+        from: "end",
+      },
+      ease: "power4.out",
+    },
+    "-=0.3",
+  );
+
+  function toggleMenu() {
+    if (tl.reversed()) {
+      tl.play();
+    } else {
+      tl.reverse();
+    }
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+  closeBtn.addEventListener("click", toggleMenu);
+}
+
+menuAnimation();
