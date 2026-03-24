@@ -16,8 +16,5 @@ A modern, minimal web experience built with smooth animations and clean UI desig
 ## 📌 Status
 🚧 **Project Coming Soon**
 
-## 📷 Preview
-> UI and live demo will be added soon.
-
 ## 📬 Connect
 - LinkedIn: https://www.linkedin.com/in/sanchaywankhede/
